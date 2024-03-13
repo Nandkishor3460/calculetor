@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conatiner">
+        <div class="section">
+            <div class="calculetor">
+                <div class="display">
+                        <p id="display"></p>      
+                </div>
+                <div class="button">
+                    <button id="button" onclick="clrscr()">c</button>
+                    <button id="button" onclick="appendscreen('/')">/</button>
+                    <button id="button" onclick="appendscreen('X')">X</button>
+                    <button id="button" value="cls">cls</button>
+                    <button id="button" onclick="appendscreen('7')">7</button>
+                    <button id="button" onclick="appendscreen('8')">8</button>
+                    <button id="button" onclick="appendscreen('9')">9</button>
+                    <button id="button" onclick="appendscreen('-')">-</button>
+                    <button id="button" onclick="appendscreen('4')">4</button>
+                    <button id="button" onclick="appendscreen('5')">5</button>
+                    <button id="button"onclick="appendscreen('6')">6</button>
+                    <button id="button" onclick="appendscreen('+')">+</button>
+                    <button id="button"  onclick="appendscreen('1')">1</button>
+                    <button id="button"  onclick="appendscreen('2')">2</button>
+                    <button id="button"  onclick="appendscreen('3')">3</button>
+                    <button id="button" onclick="appendscreen('%')">%</button>
+                    <button id="but" class="BigButton"onclick="appendscreen('0')">0</button>
+                    <button id="button" onclick="appendscreen('.')">.</button>
+                    <button id="button" onclick="opration()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+      function appendscreen(value) {
+            document.getElementById('display').innerHTML += value;
+        }
+        function clrscr() {
+            document.getElementById('display').innerHTML = '';
+        }
+
+        function opration() {
+            const result =  eval(document.getElementById('display').innerText)
+    document.getElementById('display').innerText = result;
+        }
+   
+        
+ 
+</script>
+</html>
